@@ -1,0 +1,31 @@
+﻿<h1> Registreerimisvorm</h1>
+        <form method="post" action="?page=registreeri">
+              <table class="registreerimine">
+                <tr>
+                  <td>Kasutajanimi</td>
+                  <td>
+                    <input type="text" name="kasutajanimi" >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Parool</td>
+                  <td>
+                    <input type="password" name="parool" >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Korda parooli</td>
+                  <td>
+                    <input type="password" name="kordaparooli" >
+                  </td>
+                </tr>                
+              </table>
+              <p>
+                <button type="submit"> Registreeri konto </button>
+              </p>
+              <?php if (isset($errors)):?>
+		              <?php foreach($errors as $error):?>
+			                 <p id="veateade"><?php echo htmlspecialchars($error); ?></p>
+		                   <?php endforeach;?>
+	            <?php endif;?>
+        </form>

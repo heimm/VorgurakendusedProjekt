@@ -1,0 +1,27 @@
+﻿<h1>Sisselogimine</h1>
+        <form method="post" action="?page=sisselogimine">
+              <input type="hidden" name="action" value="login">
+              <table class="sisselogimine">
+                <tr>
+                  <td>Kasutajanimi</td>
+                  <td>
+                    <input type="text" name="kasutajanimi" placeholder="Kasutajanimi">
+                  </td>
+                </tr>
+                <tr>
+                  <td> Parool</td>
+                  <td>
+                    <input type="password" name="parool" placeholder="Parool">
+                  </td>
+                </tr>
+              </table>
+              <p class="loginvaade">
+                <button type="submit">Logi sisse</button>
+                või <a href=" ?page=registreeri">Registreeri konto</a>
+              </p>
+              <?php if (isset($errors)):?>
+		              <?php foreach($errors as $error):?>
+			                 <p id="veateade"><?php echo htmlspecialchars($error); ?></p>
+		                   <?php endforeach;?>
+	            <?php endif;?>
+        </form>

@@ -1,0 +1,33 @@
+﻿<h1> Muuda andmeid </h1>
+<form method="post" action="?page=profiil">
+      <table>
+        <?php foreach($rows as $row): ?>
+        <tr>
+          <td>Kasutajanimi</td>
+          <td>
+            <input type="text" name="kasutajanimi" value= "<?php  echo htmlspecialchars($row['Kasutajanimi']); ?>" >
+          </td>
+        </tr>
+        <tr>
+          <td> Uuenda parool</td>
+          <td>
+            <input type="password" name="parool"  >
+          </td>
+        </tr>
+        <tr>
+          <td> Korda uut parooli</td>
+          <td>
+            <input type="password" name="kordaparooli" >
+          </td>
+        </tr>
+      <?php endforeach; ?>
+      </table>
+      <p>
+        <button type="submit"> Muuda andmed </button>
+      </p>
+      <?php if (isset($errors)):?>
+          <?php foreach($errors as $error):?>
+               <div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+               <?php endforeach;?>
+      <?php endif;?>
+</form>

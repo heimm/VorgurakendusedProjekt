@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Dokumentide register</title>
+	<link rel="stylesheet" type="text/css" href="stiil.css">
+</head>
+<body>
+<div>
+	<ul>
+		<li> <a href="?" class="button"> Pealeht </a></li>
+		<?php if(isset($_SESSION['user'])): ?>
+				<li> <a href="?page=sisesta" class="button"> Sisesta dokument </a></li>
+				<li> <a href="?page=dokumendid" class="button"> Minu dokumendid </a></li>
+				<li> <a href="?page=profiil" class="button"> Muuda andmeid </a></li>
+			<?php else: ?>
+					<li> <a href="?page=sisselogimine" class="button"> Logi sisse </a></li>
+					<li> <a href="?page=registreeri" class="button"> Registreeri </a></li>
+		<?php endif; ?>
+		<?php if(isset($_SESSION['user'])): ?>
+		<form method="post" action="?page=logout">
+			<input type="hidden" name="logout" value="logout">
+			<button class="logout" type="submit"> Logi välja </button>
+		</form>
+	<?php endif; ?>
+	</ul>
+</div>
