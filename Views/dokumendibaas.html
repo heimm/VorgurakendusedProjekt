@@ -1,0 +1,26 @@
+﻿<h1>Siit näed oma dokumente</h1>
+<div style="overflow-x:auto;">
+<table id="dokumenditabel">
+  <thead> 
+  <tr id="tiitel">
+    <th>Dokumendi number</th>
+    <th>Dokumendi nimetus</th>
+	<th></th>   
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach (kuvadokumendid() as $row): ?>
+  <tr>
+    <td><?php echo htmlspecialchars($row['dokumendinumber']); ?></td>
+    <td><?php echo htmlspecialchars($row['dokumendinimetus']); ?></td>
+	<td>
+       <form method="post" action="?page=kustutadokument">
+       <input type="hidden" name="id" value="<?= $row['id']; ?>">
+       <button type="submit" class="eemalda">Kustuta</button>
+       </form>
+    </td>
+  </tr>
+	<?php endforeach; ?>
+	</tbody>
+</table>
+</div>

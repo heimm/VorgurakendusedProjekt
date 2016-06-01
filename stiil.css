@@ -1,0 +1,53 @@
+﻿html *
+{
+   font-size: 1em !important;
+   color: #000 !important;
+   font-family: Arial !important;
+}
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #3b5998;
+    background-color: #dfe3ee;
+	}
+#menu li{
+	float: left;
+	}
+#menu li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	}	
+#menu li a:hover:not(.active) {
+	background-color: #ddd;
+	}
+#menu li a.active {
+    color: blue;
+    background-color: #8b9dc3;
+	}	
+#wrap{
+	max-width:1000px; min-width:600px;
+	margin:auto;
+	}	
+#dokumenditabel {
+	border-collapse: collapse;
+    width: 100%;
+	}	
+#dokumenditabel th, td{
+    text-align: left;
+    padding: 8px;
+	}
+#dokumenditabel tr:nth-child(even){
+	background-color: #dfe3ee
+	}
+#tiitel{
+	background-color: #dfe3ee;
+	border: 1px solid #dddada;
+	}
+#headerpic{
+	padding-bottom: 5px;
+	}

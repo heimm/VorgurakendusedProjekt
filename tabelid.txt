@@ -1,0 +1,15 @@
+?CREATE TABLE IF NOT EXISTS `merlenhe_projekt_kasutajad` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `kasutaja` varchar(100) NOT NULL,
+  `parool` varchar(100) NOT NULL,
+  `ettevote` varchar(100) NOT NULL,
+  `telefon` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL   
+);
+
+CREATE TABLE IF NOT EXISTS `merlenhe_projekt_dokumendid` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `dokumendinumber` varchar(100) NOT NULL,
+  `dokumendinimetus` varchar(100) NOT NULL,
+  `kasutaja` varchar(100) NOT NULL   
+);

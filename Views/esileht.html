@@ -1,0 +1,7 @@
+﻿<?php if(isset($_SESSION['user'])): ?>
+	<h1 id="greetingtext"> Tere tulemast, kasutaja <?php echo $_SESSION['user']. "!";?></h1>	
+	<p>See lehekülg aitab sul oma dokumente hallata.</p>
+<?php else: ?>
+	<h1 id="greetingtext"> Tere tulemast!</h1>	
+	<p>See lehekülg aitab sul oma dokumente hallata.</p>
+<?php endif; ?>	

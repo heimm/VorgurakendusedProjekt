@@ -1,31 +1,40 @@
-﻿<h1> Registreerimisvorm</h1>
-        <form method="post" action="?page=registreeri">
-              <table class="registreerimine">
-                <tr>
-                  <td>Kasutajanimi</td>
-                  <td>
-                    <input type="text" name="kasutajanimi" >
-                  </td>
-                </tr>
-                <tr>
-                  <td>Parool</td>
-                  <td>
-                    <input type="password" name="parool" >
-                  </td>
-                </tr>
-                <tr>
-                  <td>Korda parooli</td>
-                  <td>
-                    <input type="password" name="kordaparooli" >
-                  </td>
-                </tr>                
-              </table>
-              <p>
-                <button type="submit"> Registreeri konto </button>
-              </p>
-              <?php if (isset($errors)):?>
-		              <?php foreach($errors as $error):?>
-			                 <p id="veateade"><?php echo htmlspecialchars($error); ?></p>
-		                   <?php endforeach;?>
-	            <?php endif;?>
-        </form>
+﻿<h1>Registreerimine</h1>
+<div id="register">
+	<form action="?page=registreerimine" method="POST" >
+		<table>
+			<tr>
+			  <td>Kasutajanimi:</td>
+			  <td><input type="text" name="user" placeholder="Kasutajanimi"/></td>
+			</tr>
+			<tr>
+			  <td>Parool:</td>
+			  <td><input type="password" name="password" placeholder="Parool"/></td>
+			</tr>
+			<tr>
+			  <td>Parool uuesti:</td>
+			  <td><input type="password" name="passwordagain" placeholder="Korda parooli"/></td>
+			</tr>
+			<tr>
+			  <td>Asutus:</td>
+			  <td><input type="text" name="asutus" placeholder="Asutus"/></td>
+			</tr>
+			<tr>
+			  <td>Telefoninumber:</td>
+			  <td><input type="text" name="telefon" placeholder="Telefoninumber"/></td>
+			</tr>
+			<tr>
+			  <td>E-mail:</td>
+			  <td><input type="text" name="email" placeholder="E-mail"/></td>
+			</tr>
+			<tr>
+			  <td><input type="submit" value="Registreeri!"/></td>
+			</tr>
+	    </table>	
+	</form>	
+	<?php if (isset($errors)):?>
+		<?php foreach($errors as $error):?>
+			<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+		<?php endforeach;?>
+	<?php endif;?>
+</div>
+Status 

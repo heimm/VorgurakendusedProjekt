@@ -1,0 +1,23 @@
+﻿<h1>Sisesta uus dokument</h1>
+<div id="sisestadokument">
+	<form action="?page=sisestadokument" method="POST" >		
+		<table>
+			<tr>
+			  <td>Dokumendi nr.</td>
+			  <td><input type="text" name="dokumendinumber" placeholder="Dokumendi nr."/></td>
+			</tr>
+			<tr>
+			  <td>Dokumendi nimetus</td>
+			  <td><input type="text" name="dokumendinimetus" placeholder="Dokumendi nimetus"/></td>
+			</tr>
+			<tr>
+			  <td><input type="submit" value="Sisesta dokument"/></td>
+			</tr>
+	    </table>		
+	</form>
+	<?php if (isset($errors)):?>
+		<?php foreach($errors as $error):?>
+			<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+		<?php endforeach;?>
+	<?php endif;?>
+</div>

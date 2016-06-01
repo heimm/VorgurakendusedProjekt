@@ -1,0 +1,14 @@
+﻿<h1>Logi sisse</h1>
+<div id="login">
+	<form action="?page=logisisse" method="POST" >
+		<input type="hidden" name="action" value="login">
+		<input type="text" name="user" placeholder="Kasutajanimi"/><br/>
+		<input type="password" name="password" placeholder="Parool"/><br/>
+		<input type="submit" value="Logi sisse!"/>
+	</form>	
+	<?php if (isset($errors)):?>
+		<?php foreach($errors as $error):?>
+			<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+		<?php endforeach;?>
+	<?php endif;?>
+</div>
